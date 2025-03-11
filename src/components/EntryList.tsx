@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { formatDistanceToNow } from 'date-fns';
-import { Trash2 } from 'lucide-react';
-import type { FoodEntry } from '../types';
+import { motion, AnimatePresence } from "framer-motion";
+import { formatDistanceToNow } from "date-fns";
+import { Trash2 } from "lucide-react";
+import type { FoodEntry } from "../types";
 
 interface EntryListProps {
   entries: FoodEntry[];
@@ -15,7 +14,7 @@ export function EntryList({ entries, onDelete }: EntryListProps) {
       <div className="flex-1 overflow-y-auto">
         <AnimatePresence>
           {entries.length === 0 ? (
-            <div className="text-center py-8 text-gray-500 dark:text-gray-400">
+            <div className="py-8 text-center text-gray-500 dark:text-gray-400">
               No entries yet. Add your first protein source above!
             </div>
           ) : (
@@ -29,16 +28,22 @@ export function EntryList({ entries, onDelete }: EntryListProps) {
               >
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="font-medium text-gray-900 dark:text-white">{entry.name}</h3>
+                    <h3 className="font-medium text-gray-900 dark:text-white">
+                      {entry.name}
+                    </h3>
                     <p className="text-sm text-gray-500 dark:text-gray-400">
-                      {formatDistanceToNow(entry.timestamp, { addSuffix: true })}
+                      {formatDistanceToNow(entry.timestamp, {
+                        addSuffix: true,
+                      })}
                     </p>
                   </div>
                   <div className="flex items-center gap-4">
-                    <span className="font-medium text-red-600 dark:text-red-400">{entry.protein}g</span>
+                    <span className="font-medium text-red-600 dark:text-red-400">
+                      {entry.protein}g
+                    </span>
                     <button
                       onClick={() => onDelete(entry.id)}
-                      className="text-gray-400 hover:text-red-500 dark:text-gray-500 dark:hover:text-red-400 transition-colors"
+                      className="text-gray-400 transition-colors hover:text-red-500 dark:text-gray-500 dark:hover:text-red-400"
                     >
                       <Trash2 size={18} />
                     </button>

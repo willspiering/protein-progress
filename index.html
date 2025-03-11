@@ -1,20 +1,77 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/pwa-192x192.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta name="theme-color" content="#1d4ed8" />
-    <meta name="description" content="Track your daily protein intake with style" />
-    <link rel="apple-touch-icon" href="/pwa-192x192.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"
+    />
+    <meta name="theme-color" content="#dc2626" />
+    <meta
+      name="description"
+      content="Track your daily protein intake with style"
+    />
+    <link rel="apple-touch-icon" href="/splash-logo.svg" />
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
     <meta name="apple-mobile-web-app-title" content="Protein Progress" />
+
+    <!-- iOS Splash Screen Images -->
+    <link
+      rel="apple-touch-startup-image"
+      href="/splash-logo.svg"
+      media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="/splash-logo.svg"
+      media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="/splash-logo.svg"
+      media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="/splash-logo.svg"
+      media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="/splash-logo.svg"
+      media="(min-device-width: 768px) and (max-device-width: 1024px)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="/splash-logo.svg"
+      media="(min-device-width: 834px) and (max-device-width: 834px) and (-webkit-device-pixel-ratio: 2)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="/splash-logo.svg"
+      media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-device-pixel-ratio: 2)"
+    />
+
+    <!-- Additional favicon formats for better cross-browser support -->
+    <link rel="mask-icon" href="/favicon.svg" color="#dc2626" />
+    <meta name="msapplication-TileImage" content="/favicon.svg" />
+    <meta name="msapplication-TileColor" content="#dc2626" />
+
     <title>Protein Progress - Track Your Protein Intake</title>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <noscript>
+      <div style="padding: 20px; text-align: center">
+        Please enable JavaScript to use this application.
+      </div>
+    </noscript>
   </body>
 </html>
